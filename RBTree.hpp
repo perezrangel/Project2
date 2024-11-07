@@ -2,6 +2,7 @@
 #define RBTREE_HPP
 
 #include "RBTreeNode.hpp"
+#include <iostream>
 
 template <typename T>
 class RBTree {
@@ -29,9 +30,14 @@ public:
     void insert(T value);
     void remove(T value);
 
+    // Traversal methods
+    void printPreOrderTraversal() const;
+    void printInOrderTraversal() const;
+    void printPostOrderTraversal() const;
+
     // Utility functions
     bool isEmpty() const;
-    void printTree() const;
+    void printTree() const; // In-order traversal helper
 };
 
 #include "RBTree.cpp"
